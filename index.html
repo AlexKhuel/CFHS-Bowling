@@ -1,1 +1,35 @@
-<h1>Hello World!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bowling Tracker</title>
+    <style>
+        .counter { display: inline-block; margin: 10px; }
+        .btn { margin: 5px; }
+    </style>
+</head>
+<body>
+    <div class="counter">
+        <button class="btn" onclick="changeCounter('counter1', -1)">-</button>
+        <span id="counter1">0</span>
+        <button class="btn" onclick="changeCounter('counter1', 1)">+</button>
+    </div>
+    <div class="counter">
+        <button class="btn" onclick="changeCounter('counter2', -1)">-</button>
+        <span id="counter2">0</span>
+        <button class="btn" onclick="changeCounter('counter2', 1)">+</button>
+    </div>
+    <div class="counter">
+        <button class="btn" onclick="changeCounter('counter3', -1)">-</button>
+        <span id="counter3">0</span>
+        <button class="btn" onclick="changeCounter('counter3', 1)">+</button>
+    </div>
+    <script>
+        function changeCounter(counterId, delta) {
+            var counter = document.getElementById(counterId);
+            var value = parseInt(counter.innerText) + delta;
+            counter.innerText = value;
+        }
+    </script>
+</body>
+</html>
